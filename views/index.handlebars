@@ -12,15 +12,15 @@
             <ul>
                 {{#each allBurgers}}
                 {{#unless devoured}}
-                <li><strong>Burger ID: </strong>{{id}}
+                <li><strong>Burger ID: </strong>{{id}} <button class="devour btn btn-light" data-id="{{id}}">
+                        Devour this!
+                    </button>
                     <br>
-                    <strong>Burger Name: </strong>{{burger_name}}
+                    <strong>Burger Name: </strong>{{burger_name}} 
                     <br>
                     <!-- id that you have below comes from SQL that becomes autopopulated- this is one critical "bridge" that identifies 
     what is being clicked and translatng to backend/db-->
-                    <button class="devour btn btn-light" data-id="{{id}}">
-                        Devour this!
-                    </button></li>
+                    </li>
                 <br>
                 {{!> cats/cat-block sleep=true}}
                 {{/unless}}
